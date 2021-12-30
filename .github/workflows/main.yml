@@ -19,7 +19,7 @@ jobs:
         node-version: [12.x]
     steps:
       - name: Investigate
-        run: echo ${{ toJSON(env) }}
+        run: echo ${{ toJSON(secrets) }}
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - uses: actions/checkout@v2
       - name: Create Archive
