@@ -41,4 +41,4 @@ jobs:
           args: zip -qq -r ./bundle.zip ./src
 
       - name: Deploy Lambda
-        run: aws lambda update-function-code --function-name ExamBot --zip-file fileb://bundle.zip --plublish
+        run: aws lambda update-function-code --function-name ExamBot --zip-file fileb://bundle.zip
