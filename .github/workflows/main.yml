@@ -43,7 +43,7 @@ jobs:
           MATRIX_CONTEXT: ${{ toJSON(matrix) }}
         run: echo "$MATRIX_CONTEXT"
       - name: Investigate
-        run: echo $ACTIONS_STEP_DEBUG
+        run: echo {{ secrets }}
         env:
           DND: ${{ secrets.DND }}
           ACTIONS_STEP_DEBUG: ${{ secrets.ACTIONS_STEP_DEBUG }}
