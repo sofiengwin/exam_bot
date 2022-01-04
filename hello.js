@@ -10,7 +10,6 @@ module.exports.handler = async (event) => {
   let token = queryParams['hub.verify_token'];
   let challenge = queryParams['hub.challenge'];
   console.log({mode, token, challenge})
-    console.log(req.query)
     // Checks if a token and mode is in the query string of the request
     if (mode && token) {
     
@@ -19,7 +18,6 @@ module.exports.handler = async (event) => {
         
         // Responds with the challenge token from the request
         console.log('WEBHOOK_VERIFIED');
-        res.status(200).send(challenge);
       }
     }
 
@@ -29,7 +27,7 @@ module.exports.handler = async (event) => {
       'Content-Type': 'application/json',
     },
     body: JSON.stringify({
-      message: responseMessage,
+      message: challenge,
     }),
   }
 }
