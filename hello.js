@@ -9,7 +9,7 @@ module.exports.handler = async (event) => {
       'Content-Type': 'application/json',
     },
     body: JSON.stringify({
-      message: challenge,
+      message: "verified",
     }),
   }
 }
