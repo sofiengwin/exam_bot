@@ -3,7 +3,7 @@ module.exports.handler = async (event) => {
   const queryParams = event.queryStringParameters;
   console.log({queryParams})
     // Your verify token. Should be a random string.
-  let VERIFY_TOKEN = 'https://dts9lexckf.execute-api.us-east-1.amazonaws.com/exam_stage/bot?hub.verify_token=good&hub.mode=subscribe'
+  let VERIFY_TOKEN = 'good'
     
     // Parse the query params
   let mode = queryParams['hub.mode'];
