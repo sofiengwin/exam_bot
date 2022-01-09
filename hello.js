@@ -8,7 +8,7 @@ module.exports.handler = async (event) => {
   console.log('ENV', process.env)
   const sample = {
     recipient: {
-      id: "<PSID>",
+      id: process.env.PAGE_ID,
     },
     message: {
       attachment: {
