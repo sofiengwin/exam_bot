@@ -16,6 +16,10 @@ jobs:
         node-version: [12.x]
     steps:
       - uses: actions/checkout@v2
+      - uses: actions/setup-node@v2
+      - run: npm install
+      - run: npm run build
+      - run: ls
       - name: Configure AWS Credentials
         uses: aws-actions/configure-aws-credentials@v1
         with:
@@ -25,7 +29,7 @@ jobs:
       - name: Create Archive
         uses: montudor/action-zip@v1
         with:
-          args: zip -qq -r ./bundle.zip ./hello.js
+          args: zip -qq -r ./bundle.zip ./index.js
 
       - name: Deploy Lambda
         run: aws lambda update-function-code --function-name ExamBot --zip-file fileb://bundle.zip
