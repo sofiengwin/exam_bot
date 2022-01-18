@@ -1,8 +1,7 @@
 
 import {sendAPi} from './util/sendApi'
-require('dotenv').config()
 
-console.log(process.env.API_URL)
+console.log("djdjdjdjjd", process.env)
 export const handler = async () => {
   console.log('before api')
   await sendAPi()

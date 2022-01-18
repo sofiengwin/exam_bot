@@ -6,7 +6,8 @@
   "main": "index.js",
   "scripts": {
     "watch": "parcel watch",
-    "build": "parcel build"
+    "build": "parcel build",
+    "start": "node ./scripts/setupEnv.js && node ./index.js"
   },
   "keywords": [],
   "author": "",
