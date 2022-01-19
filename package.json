@@ -4,6 +4,7 @@
   "description": "",
   "source": "src/index.ts",
   "main": "index.js",
+  "module": "dist/module.js",
   "scripts": {
     "watch": "parcel watch",
     "build": "parcel build",
@@ -13,7 +14,7 @@
   "author": "",
   "license": "ISC",
   "devDependencies": {
-    "parcel": "^2.1.1",
+    "ts-loader": "^9.2.6",
     "typescript": "^4.5.4"
   },
   "dependencies": {
