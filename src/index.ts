@@ -4,7 +4,7 @@ import {sendAPi} from './util/sendApi'
 console.log("djdjdjdjjd", process.env)
 exports.handler = async () => {
   console.log('before api')
-  const result = await sendAPi()
+  const result: any = await sendAPi()
   console.log('after api')
 
   return {
@@ -12,6 +12,6 @@ exports.handler = async () => {
     headers: {
       'Content-Type': 'application/json',
     },
-    body: JSON.stringify(result),
+    body: JSON.stringify({message: "hello world!", ...result}),
   }
 }
