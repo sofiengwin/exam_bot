@@ -8,5 +8,3 @@ export const handler = async () => {
   console.log('after api')
 
 }
-
-handler()
