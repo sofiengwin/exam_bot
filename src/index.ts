@@ -8,10 +8,10 @@ exports.handler = async (event: any) => {
     "url":"https://www.messenger.com",
     "title":"Visit Messenger"
   }
-  console.log("sender:", eventBody.entry[0].messaging.sender.id)
+  console.log("sender:", eventBody.entry[0].messaging[0].sender.id)
   const sample = {
     recipient: {
-      id: eventBody.entry[0].messaging.sender.id,
+      id: eventBody.entry[0].messaging[0].sender.id,
     },
     message: {
       attachment: {
