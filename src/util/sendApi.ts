@@ -12,6 +12,6 @@ export const sendAPi = (payload: any) => {
     .catch(function (error) {
       // handle error
       console.log(error);
-      return error
+      return error.data
     })
 }
