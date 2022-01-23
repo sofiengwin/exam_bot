@@ -2,7 +2,8 @@
 import {sendAPi} from './util/sendApi'
 
 exports.handler = async (event: any) => {
-  console.log('before api', event.body)
+  const payload = JSON.parse(event.body)
+  console.log('before api', event.body, {payload})
   const result: any = await sendAPi()
   console.log('after api')
   console.log({result})
