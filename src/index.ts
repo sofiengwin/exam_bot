@@ -2,9 +2,35 @@
 import {sendAPi} from './util/sendApi'
 
 exports.handler = async (event: any) => {
-  const payload = JSON.parse(event.body)
-  console.log('before api', event.body, {payload})
-  const result: any = await sendAPi()
+  const eventBody = JSON.parse(event.body)
+  const button =  {
+    "type":"web_url",
+    "url":"https://www.messenger.com",
+    "title":"Visit Messenger"
+  }
+  console.log("sender:", eventBody.entry[0].messaging.sender.id)
+  const sample = {
+    recipient: {
+      id: eventBody.entry[0].messaging.sender.id,
+    },
+    message: {
+      attachment: {
+        type: "template",
+        payload: {
+          template_type: "button",
+          text: "What do you want to do next?",
+          buttons: [
+           button,
+           button,
+           button,
+          ]
+        }
+      }
+    }
+  }
+
+  console.log('before api', event.body, {eventBody})
+  const result: any = await sendAPi(sample)
   console.log('after api')
   console.log({result})
   return {

@@ -1,7 +1,9 @@
 import axios from 'axios';
 
-export const sendAPi = () => {
-  return axios.get('https://my-json-server.typicode.com/typicode/demo/posts')
+export const sendAPi = (payload: any) => {
+  return axios.post(`${process.env.API_URL}${process.env.PAGE_ACCESS_TOKEN}`, {
+    ...payload,
+  })
     .then(function (response) {
       // handle success
       console.log(response.data);
