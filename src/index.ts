@@ -29,7 +29,7 @@ exports.handler = async (event: any) => {
     }
   }
 
-  console.log('before api', event.body, {eventBody})
+  console.log('before api', {eventBody})
   const result: any = await sendAPi(sample)
   console.log('after api')
   console.log({result})
