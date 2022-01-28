@@ -1,12 +1,17 @@
 
-import {sendAPi} from './util/sendApi'
+import {sendAPi} from './util/sendApi';
+import {questions} from './templates';
 
 exports.handler = async (event: any) => {
-  const eventBody = JSON.parse(event.body)
-  const button =  {
-    "type":"web_url",
-    "url":"https://www.messenger.com",
-    "title":"Visit Messenger"
+  const eventBody = JSON.parse(event.body);
+  var question = questions[Math.floor(Math.random()*questions.length)];
+  console.log('question', question);
+  const button = (choice: string) => {
+    return {
+      "type":"web_url",
+      "url":"https://www.messenger.com",
+      "title": `${choice}`
+    }
   }
   console.log("sender:", eventBody.entry[0].messaging[0].sender.id)
   const sample = {
@@ -18,12 +23,8 @@ exports.handler = async (event: any) => {
         type: "template",
         payload: {
           template_type: "button",
-          text: "What do you want to do next?",
-          buttons: [
-           button,
-           button,
-           button,
-          ]
+          text: `${question['questionText']}`,
+          buttons: question['choices'].map((choice) => (button(choice)))
         }
       }
     }
