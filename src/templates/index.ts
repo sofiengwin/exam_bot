@@ -13,7 +13,6 @@ export const questions = [
       "AWS Partner Network consulting partners",
       "AWS Professional Services",
       "Infrastructure Event Management",
-      "AWS Managed Services",
     ]
   },
   {
@@ -22,7 +21,6 @@ export const questions = [
       "Control Tower",
       "AWS Marketplace",
       "AWS Trusted Advisor",
-      "AWS Security Hub",
     ]
   }
 ]

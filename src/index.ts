@@ -4,7 +4,7 @@ import {questions} from './templates';
 
 exports.handler = async (event: any) => {
   const eventBody = JSON.parse(event.body);
-  var question = questions[0];
+  var question = questions[Math.floor(Math.random()*questions.length)];
   console.log('question', question);
   const button = (choice: string) => {
     return {
