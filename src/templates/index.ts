@@ -3,9 +3,9 @@ export const questions = [
     "questionText": "Which AWS Trusted Advisor real-time guidance recommendations are available for AWS Basic Support and AWS Developer Support customers?\n",
     "choices": [
       "Service limit checks",
-      "Security Groups - Specific Ports Unrestricted",
-      "Amazon S3 bucket permissions",
-      "AWS CloudTrail service down",
+      "Security Groups ",
+      "Amazon S3",
+      "AWS CloudTrail",
     ] 
   },
   {
