@@ -6,13 +6,7 @@ exports.handler = async (event: any) => {
   const eventBody = JSON.parse(event.body);
   var question = questions[Math.floor(Math.random()*questions.length)];
   console.log('question', question);
-  const button = (choice: string) => {
-    return {
-      "type":"web_url",
-      "url":"https://www.messenger.com",
-      "title": `${choice}`
-    }
-  }
+
   console.log("sender:", eventBody.entry[0].messaging[0].sender.id)
   const sample = {
     recipient: {
@@ -22,9 +16,7 @@ exports.handler = async (event: any) => {
       attachment: {
         type: "template",
         payload: {
-          template_type: "button",
-          text: `${question['questionText']}`,
-          buttons: question['choices'].map((choice) => (button(choice)))
+         ...question
         }
       }
     }
