@@ -7,33 +7,33 @@ const button = (choice: string) => {
 }
 
 export const questions = [
-  {
-    template_type: "button",
-    "text": "Which AWS Trusted Advisor real-time guidance recommendations are available for AWS Basic Support and AWS Developer Support customers?\n",
-    "buttons": [
-      "Service limit checks",
-      "Security Groups ",
-      "Amazon S3",
-    ].map((choice) => (button(choice)))
-  },
-  {
-    template_type: "button",
-    "text": "Which service reduces the operational overhead of your IT organization?",
-    "buttons": [
-      "AWS Partner Network consulting partners",
-      "AWS Professional Services",
-      "Infrastructure Event Management",
-    ].map((choice) => (button(choice)))
-  },
-  {
-    template_type: "button",
-    "text": "Which service provides the easiest way to set up and govern a secure, multi-account AWS environment?\n",
-    "buttons": [
-      "Control Tower",
-      "AWS Marketplace",
-      "AWS Trusted Advisor",
-    ].map((choice) => (button(choice)))
-  },
+  // {
+  //   template_type: "button",
+  //   "text": "Which AWS Trusted Advisor real-time guidance recommendations are available for AWS Basic Support and AWS Developer Support customers?\n",
+  //   "buttons": [
+  //     "Service limit checks",
+  //     "Security Groups ",
+  //     "Amazon S3",
+  //   ].map((choice) => (button(choice)))
+  // },
+  // {
+  //   template_type: "button",
+  //   "text": "Which service reduces the operational overhead of your IT organization?",
+  //   "buttons": [
+  //     "AWS Partner Network consulting partners",
+  //     "AWS Professional Services",
+  //     "Infrastructure Event Management",
+  //   ].map((choice) => (button(choice)))
+  // },
+  // {
+  //   template_type: "button",
+  //   "text": "Which service provides the easiest way to set up and govern a secure, multi-account AWS environment?\n",
+  //   "buttons": [
+  //     "Control Tower",
+  //     "AWS Marketplace",
+  //     "AWS Trusted Advisor",
+  //   ].map((choice) => (button(choice)))
+  // },
   {
     "template_type": "list",
     "top_element_style": "compact",
