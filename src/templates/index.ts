@@ -41,15 +41,14 @@ export const questions = [
       {
         "title": "Classic T-Shirt Collection",
         "subtitle": "See all our colors",
-        "image_url": "https://originalcoastclothing.com/img/collection.png",          
         "buttons": [
           {
             "title": "View",
             "type": "web_url",
-            "url": "https://originalcoastclothing.com/collection",
+            "url": "https://www.messenger.com",
             "messenger_extensions": true,
             "webview_height_ratio": "tall",
-            "fallback_url": "https://originalcoastclothing.com/"            
+            "fallback_url": "https://www.messenger.com"            
           }
         ]
       },
@@ -58,30 +57,27 @@ export const questions = [
         "subtitle": "See all our colors",
         "default_action": {
           "type": "web_url",
-          "url": "https://originalcoastclothing.com/view?item=100",
+          "url": "https://www.messenger.com",
           "messenger_extensions": false,
           "webview_height_ratio": "tall"
         }
       },
       {
         "title": "Classic Blue T-Shirt",
-        "image_url": "https://originalcoastclothing.com/img/blue-t-shirt.png",
         "subtitle": "100% Cotton, 200% Comfortable",
         "default_action": {
           "type": "web_url",
-          "url": "https://originalcoastclothing.com/view?item=101",
+          "url": "https://www.messenger.com",
           "messenger_extensions": true,
           "webview_height_ratio": "tall",
-          "fallback_url": "https://originalcoastclothing.com/"
         },
         "buttons": [
           {
             "title": "Shop Now",
             "type": "web_url",
-            "url": "https://originalcoastclothing.com/shop?item=101",
+            "url": "https://www.messenger.com",
             "messenger_extensions": true,
             "webview_height_ratio": "tall",
-            "fallback_url": "https://originalcoastclothing.com/"            
           }
         ]        
       }
