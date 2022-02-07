@@ -6,6 +6,7 @@ exports.handler = async (event: any) => {
   const eventBody = JSON.parse(event.body);
   var question = questions[Math.floor(Math.random()*questions.length)];
   console.log('question', question);
+  console.log('event.body', event.body)
 
   console.log("sender:", eventBody.entry[0].messaging[0].sender.id)
   const sample = {
