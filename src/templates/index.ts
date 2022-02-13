@@ -16,24 +16,6 @@ export const questions = [
       "Amazon S3",
     ].map((choice) => (button(choice)))
   },
-  {
-    template_type: "button",
-    "text": "Which service reduces the operational overhead of your IT organization?",
-    "buttons": [
-      "AWS Partner Network consulting partners",
-      "AWS Professional Services",
-      "Infrastructure Event Management",
-    ].map((choice) => (button(choice)))
-  },
-  {
-    template_type: "button",
-    "text": "Which service provides the easiest way to set up and govern a secure, multi-account AWS environment?\n",
-    "buttons": [
-      "Control Tower",
-      "AWS Marketplace",
-      "AWS Trusted Advisor",
-    ].map((choice) => (button(choice)))
-  },
   // {
   //   "template_type": "list",
   //   "top_element_style": "compact",
