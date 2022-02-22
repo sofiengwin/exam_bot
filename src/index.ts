@@ -8,7 +8,6 @@ exports.handler = async (event: any) => {
   console.log('question', question);
   console.log('event.body', event.body)
 
-  console.log("sender:", eventBody.entry[0].messaging[0].sender.id)
   const sample = {
     recipient: {
       id: eventBody.entry[0].messaging[0].sender.id,
