@@ -1,6 +1,10 @@
 import axios from 'axios';
 
-export const sendAPi = (payload: any) => {
+import { messengerTemplate } from '../templates/message';
+
+export const sendAPi = (templateName: string, recipient: string) => {
+  const payload = messengerTemplate(templateName, recipient)
+  console.log({payload})
   return axios.post(`${process.env.API_URL}${process.env.PAGE_ACCESS_TOKEN}`, {
     ...payload,
   })
