@@ -10,7 +10,7 @@ exports.handler = async (event: any) => {
   console.log('event.body', event.body)
   console.log('recipient', recipient)
 
-  const result: any = await sendAPi('questionTemplate', recipient)
+  const result: any = await sendAPi('responseTemplate', recipient)
   console.log('after api')
   console.log({result})
   return {
