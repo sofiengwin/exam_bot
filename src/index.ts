@@ -4,10 +4,10 @@ import {questions} from './templates';
 
 exports.handler = async (event: any) => {
   const eventBody = JSON.parse(event.body);
+  console.log('event.body', event.body)
   var question = questions[Math.floor(Math.random()*questions.length)];
   const recipient = eventBody.entry[0].messaging[0].sender.id
   console.log('question', question);
-  console.log('event.body', event.body)
   console.log('recipient', recipient)
 
   const result: any = await sendAPi('responseTemplate', recipient)
